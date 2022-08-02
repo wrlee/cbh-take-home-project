@@ -12,7 +12,6 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 - Use modern ES6 (need to add webpack or babel)
 - Add block comments to aid in IDE hints
-- Init `candidate`
 - Handle unexpected `event` values
 - Centralize constants for easier "configuration"
-- Catch exception in creating hash
+- Reduce complexity of `deterministicPartitionKey`, refactoring functionality to sub-functions
