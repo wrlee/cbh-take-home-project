@@ -1,5 +1,5 @@
-import crypto from 'crypto';
-import { TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH } from './constants';
+const crypto = require('crypto');
+const { TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH } = require('./constants');
 
 
 /**
@@ -7,11 +7,11 @@ import { TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH } from './constants';
  * @param {string} event Containing partition key
  * @returns Normalized partition key
  */
-const deterministicPartitionKey = (event) => {
+exports.deterministicPartitionKey = (event) => {
   let candidate='';
 
   if (event) {
-    if (event?.partitionKey) {
+    if (event.partitionKey) {
       candidate = event.partitionKey;
     } else {
       const data = JSON.stringify(event);
@@ -36,5 +36,3 @@ const deterministicPartitionKey = (event) => {
   }
   return candidate;
 };
-
-exports.deterministicPartitionKey = deterministicPartitionKey;

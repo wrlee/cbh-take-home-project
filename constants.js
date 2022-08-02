@@ -1,2 +1,2 @@
-export const TRIVIAL_PARTITION_KEY = "0";
-export const MAX_PARTITION_KEY_LENGTH = 256;
+exports.TRIVIAL_PARTITION_KEY = "0";
+exports.MAX_PARTITION_KEY_LENGTH = 256;
